@@ -9,7 +9,7 @@ import os
 # 0. CONFIGURACIÓN DE CREDENCIALES
 # ==========================================
 TU_CORREO = st.secrets["TU_CORREO"]
-TU_CONTRASEÑA_APP = st.secrets["TU_CONTRASEÑA_APP"]
+TU_CONTRASENA_APP = st.secrets["TU_CONTRASENA_APP"]
 TU_CELULAR = st.secrets["TU_CELULAR"]
 
 def enviar_correo(nombre, email_alumno, nivel, materia, mensaje):
