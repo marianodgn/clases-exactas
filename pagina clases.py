@@ -273,8 +273,9 @@ with col_res1:
     st.markdown("""
     <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
         <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente predisposición y claridad para explicar. Me ayudó a preparar Análisis Matemático y aprobé con buena nota. Súper recomendable."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Estudiante Universitario (CBC)</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Eternamente agradecida un excelente profesor que sabe transmitir sus conocimientos con toda la paciencia del mundo. Preparo a mí nene para rendir matemáticas y aprobó sin ningún error. Feliz de haber encontrado un profesor como vos que le dio a mí nene las herramientas que necesitaba para ser  resolutivo y lo más importante le diste la confianza que le faltaba para sentirse seguro.
+Todos los laureles para vos y vamos por más para que lo prepares para el curso de ingreso a la universidad."</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Karina</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -282,8 +283,8 @@ with col_res2:
     st.markdown("""
     <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
         <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Muy profesional. Va directo al grano y te da los métodos exactos para resolver los ejercicios de parciales."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Alumno de Ingeniería</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente profesor! Es súper didáctico, explica los temas de forma clara, rápida y sencilla. Se preocupa que entiendas y hace las clases entretenidas. Me ayudó a preparar mis parciales y finales de la universidad. 100% recomendado"</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Ayelen</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -291,8 +292,10 @@ with col_res3:
     st.markdown("""
     <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
         <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Gracias a las clases de Física pude entender los temas que venía arrastrando desde el secundario. Muy agradecido."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Estudiante de Exactas</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente profesor Mariano, siempre atento a que entiendas y las clases super dinámicas además de estar siempre en contacto para lo que precises. Quedan pocos como el!
+
+Super recomendable!."</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Marcos</p>
     </div>
     """, unsafe_allow_html=True)
 
