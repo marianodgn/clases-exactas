@@ -183,7 +183,7 @@ st.markdown("""
 st.markdown("""
 <div class="hero">
     <h1>Clases Particulares de Ciencias Exactas a Medida</h1>
-    <p>Acompañamiento académico personalizado para Universidad (UBA), CBC y Nivel Secundario.</p>
+    <p>Acompañamiento académico personalizado para Universidad, CBC y Nivel Secundario.</p>
     <div class="pills-container">
         <span class="pill">Análisis Matemático</span>
         <span class="pill">Introducción a la Matemática</span>
@@ -204,7 +204,7 @@ st.markdown("""
 m1, m2, m3, m4 = st.columns(4)
 m1.metric(label="Experiencia Docente", value="+20 Años")
 m2.metric(label="Alumnos Aprobados", value="+500")
-m3.metric(label="Universidades", value="UBA")
+m3.metric(label="Universidades", value="UBA / UTN / UM / UNAHUR / UNGS / UNLAM / UNO")
 m4.metric(label="Modalidad", value="Online / Presencial")
 
 st.markdown("<hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
