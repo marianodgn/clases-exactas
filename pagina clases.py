@@ -299,40 +299,6 @@ Super recomendable!."</p>
     </div>
     """, unsafe_allow_html=True)
 
-with col_res4:
-    st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
-        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente profesor Mariano, siempre atento a que entiendas y las clases super dinámicas además de estar siempre en contacto para lo que precises. Quedan pocos como el!
-
-Super recomendable!."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Marcos</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col_res5:
-    st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
-        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente profesor Mariano, siempre atento a que entiendas y las clases super dinámicas además de estar siempre en contacto para lo que precises. Quedan pocos como el!
-
-Super recomendable!."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Marcos</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col_res6:
-    st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
-        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
-        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente profesor Mariano, siempre atento a que entiendas y las clases super dinámicas además de estar siempre en contacto para lo que precises. Quedan pocos como el!
-
-Super recomendable!."</p>
-        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Marcos</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
 
 
 
