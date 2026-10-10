@@ -7,7 +7,6 @@ from email.mime.multipart import MIMEMultipart
 # 0. CONFIGURACIÓN DE CREDENCIALES
 # ==========================================
 TU_CORREO = st.secrets["TU_CORREO"]
-# Soporta tanto la variable con N como con Ñ para evitar errores
 TU_CONTRASEÑA_APP = st.secrets.get("TU_CONTRASENA_APP", st.secrets.get("TU_CONTRASEÑA_APP"))
 TU_CELULAR = st.secrets["TU_CELULAR"]
 
@@ -46,7 +45,7 @@ def enviar_correo(nombre, email_alumno, nivel, materia, mensaje):
         return False
 
 # ==========================================
-# 1. CONFIGURACIÓN GENERAL Y CSS (Estilo Mentoor)
+# 1. CONFIGURACIÓN GENERAL Y CSS 
 # ==========================================
 st.set_page_config(page_title="Clases Exactas | Acompañamiento Académico", page_icon="🎓", layout="wide")
 
@@ -56,13 +55,32 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     
-    /* Sección Hero (Encabezado principal) */
+    /* IMAGEN DE FONDO CON VELO BLANCO */
+    [data-testid="stAppViewContainer"] {
+        /* Capa 1: Velo blanco al 90% | Capa 2: Imagen universitaria/exactas */
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), 
+            url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    /* Hacemos transparente el encabezado superior de Streamlit para que no tape el fondo */
+    [data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
+    
+    /* Sección Hero (Encabezado principal con efecto translúcido) */
     .hero { 
         text-align: center; 
         padding: 3rem 1rem; 
-        background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 20px; 
         margin-bottom: 2rem; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
     .hero h1 { font-weight: 900; font-size: 3.2rem; color: #1a1a1a; line-height: 1.2; margin-bottom: 1rem; }
     .hero p { font-size: 1.25rem; color: #4a4a4a; max-width: 700px; margin: 0 auto 2rem auto; }
@@ -70,15 +88,16 @@ st.markdown("""
     /* Etiquetas de Materias (Pills) */
     .pills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 2rem; }
     .pill { 
-        background-color: #ffffff; border: 1px solid #e0e0e0; 
+        background-color: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0; 
         padding: 10px 20px; border-radius: 50px; font-weight: 600; 
         color: #2c3e50; font-size: 0.95rem; box-shadow: 0 2px 5px rgba(0,0,0,0.02); 
     }
     
     /* Tarjeta del Docente */
     .teacher-card {
-        background-color: #f8f9fa; padding: 25px; border-radius: 15px; 
+        background-color: rgba(255, 255, 255, 0.85); padding: 25px; border-radius: 15px; 
         border-left: 5px solid #0056b3; margin-bottom: 2rem;
+        backdrop-filter: blur(5px);
     }
     
     /* Pasos "Cómo funciona" */
@@ -93,11 +112,12 @@ st.markdown("""
     
     /* Formulario de Contacto (Destacado) */
     div[data-testid="stForm"] { 
-        background-color: #ffffff; 
+        background-color: rgba(255, 255, 255, 0.95); 
         border: 1px solid #eaeaea; 
         border-radius: 20px; 
         padding: 35px;
         box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        backdrop-filter: blur(5px);
     }
     
     /* Botón WhatsApp */
@@ -112,7 +132,7 @@ st.markdown("""
     
     /* Aviso de disponibilidad */
     .disclaimer-box {
-        background-color: #fcfcfc;
+        background-color: rgba(252, 252, 252, 0.9);
         border: 1px dashed #cccccc;
         border-radius: 10px;
         padding: 15px;
