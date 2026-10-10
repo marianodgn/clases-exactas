@@ -2,8 +2,6 @@ import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from PIL import Image
-import os
 
 # ==========================================
 # 0. CONFIGURACIÓN DE CREDENCIALES
@@ -54,7 +52,7 @@ st.set_page_config(page_title="Clases Exactas | Acompañamiento Académico", pag
 
 st.markdown("""
     <style>
-    /* Tipografía limpia tipo Mentoor */
+    /* Tipografía limpia */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     
@@ -111,6 +109,18 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(37,211,102,0.3); margin-top: 1rem; 
     }
     .whatsapp-btn:hover { background-color: #1ebc59; transform: translateY(-3px); }
+    
+    /* Aviso de disponibilidad */
+    .disclaimer-box {
+        background-color: #fcfcfc;
+        border: 1px dashed #cccccc;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #666666;
+        line-height: 1.4;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -132,7 +142,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# 3. MÉTRICAS (Estilo Mentoor)
+# 3. MÉTRICAS
 # ==========================================
 m1, m2, m3, m4 = st.columns(4)
 m1.metric(label="Experiencia Docente", value="+20 Años")
@@ -160,7 +170,6 @@ with col_info:
     st.markdown("### ¿Cómo funciona el proceso?")
     st.write("Te acompaño paso a paso para que recuperes la confianza y apruebes.")
     
-    # Pasos replicando la lógica de Mentoor
     st.markdown("""
     <div class="step-container">
         <div class="step-icon">1</div>
@@ -172,8 +181,8 @@ with col_info:
     <div class="step-container">
         <div class="step-icon">2</div>
         <div class="step-text">
-            <h4>Te asigno un plan a medida</h4>
-            <p>Diseñamos un cronograma de estudio adaptado estrictamente al programa oficial de tu cátedra en la universidad o colegio.</p>
+            <h4>Enfoque a medida</h4>
+            <p>Trabajamos directamente sobre los conceptos y ejercicios que requieren mayor refuerzo, adaptándonos al enfoque de tu cátedra.</p>
         </div>
     </div>
     <div class="step-container">
@@ -219,6 +228,14 @@ with col_form:
                     st.balloons()
                 else:
                     st.error("Hubo un error temporal. Por favor, utilizá el botón de WhatsApp de la izquierda.")
+
+    # Aviso de disponibilidad limitado y urgencias (Aclaración profesional)
+    st.markdown("""
+    <div class="disclaimer-box">
+        <strong>Aviso importante sobre disponibilidad:</strong><br>
+        Debido a mis compromisos de docencia e investigación universitaria, mi agenda suele estar completa. Si no recibís una respuesta a tu consulta a la brevedad, te ruego desestimarla, ya que significará que lamentablemente no cuento con cupos disponibles en este momento. Por este motivo, <strong>no es posible atender urgencias a pocos días de un examen</strong>. Gracias por comprender.
+    </div>
+    """, unsafe_allow_html=True)
 
 # Footer
 st.markdown("<br><br><hr><center><small>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
