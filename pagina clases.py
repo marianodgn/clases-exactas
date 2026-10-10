@@ -296,7 +296,7 @@ with col_form:
 # 5. SECCIÓN DE OPINIONES / RESEÑAS (Responsive)
 # ==========================================
 st.markdown("<br><hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen las reseñas de mis alumnos</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen las reseñas de mis alumnas y alumnos </h2>", unsafe_allow_html=True)
 
 # Grilla con las 15 reseñas
 st.markdown("""
