@@ -338,4 +338,35 @@ st.markdown("""
     <div class="review-card">
         <p class="stars">★★★★★</p>
         <p class="text">"muy buena enseñanza y muy atento con sus alumnos!! Gracias Mariano"</p>
-        <p class="author">— Delfina</
+        <p class="author">— Delfina</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"El mejor profesor que pude encontrar sin duda ! Explica súper bien y es muy paciente ,te va a explicar las veces que sea necesario hasta que lo entiendas , súper recomendado!"</p>
+        <p class="author">— Mikaa</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Es un profesor excelente, me ayudo a rendir 5 temas en dos semanas! Es muy bueno para explicar de una forma mas específica para alguien que le cuesta más entender (como a mí) Súper súper recomendable"</p>
+        <p class="author">— Facundo</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Excelente profesor, sabe explicar y busca la forma para que lo entiendas. Se preocupa por sus alumnos y que les vaya bien. Muy recomendable"</p>
+        <p class="author">— Leonardo</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Muy contenta con el profe,explica muy bien. Lo super recomiendo!"</p>
+        <p class="author">— Alejandra</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Super recomendable! Explica muy bien, tiene paciencia, aprobé mis 2 parciales 🙂 Exelente profesor!!"</p>
+        <p class="author">— Florencia</p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Footer
+st.markdown("<br><center><small>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
