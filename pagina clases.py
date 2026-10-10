@@ -60,7 +60,7 @@ st.markdown("""
         /* Capa 1: Velo blanco al 90% | Capa 2: Imagen universitaria/exactas */
         background-image: 
             linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), 
-            url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop");
+            url("https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
