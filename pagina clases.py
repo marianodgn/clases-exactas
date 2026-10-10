@@ -137,6 +137,10 @@ st.markdown("""
         <span class="pill">Álgebra</span>
         <span class="pill">Física General</span>
         <span class="pill">Mecánica</span>
+        <span class="pill">Biofísica</span>
+        <span class="pill">Electricidad y Magnetismo</span>
+        <span class="pill">Óptica y Ondas</span>
+        <span class="pill">Química Inorgánica</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
