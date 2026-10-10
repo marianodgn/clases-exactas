@@ -260,6 +260,45 @@ with col_form:
         Debido a mis compromisos de docencia e investigación universitaria, mi agenda suele estar completa. Si no recibís una respuesta a tu consulta a la brevedad, te ruego desestimarla, ya que significará que lamentablemente no cuento con cupos disponibles en este momento. Por este motivo, <strong>no es posible atender urgencias a pocos días de un examen</strong>. Gracias por comprender.
     </div>
     """, unsafe_allow_html=True)
+# ==========================================
+# 5. SECCIÓN DE OPINIONES / RESEÑAS (Google Maps)
+# ==========================================
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen los alumnos</h2>", unsafe_allow_html=True)
+
+# Creamos 3 columnas para mostrar las opiniones tipo tarjeta
+col_res1, col_res2, col_res3 = st.columns(3, gap="medium")
+
+with col_res1:
+    st.markdown("""
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
+        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Excelente predisposición y claridad para explicar. Me ayudó a preparar Análisis Matemático y aprobé con buena nota. Súper recomendable."</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Estudiante Universitario (CBC)</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col_res2:
+    st.markdown("""
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
+        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Muy profesional. Va directo al grano y te da los métodos exactos para resolver los ejercicios de parciales."</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Alumno de Ingeniería</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col_res3:
+    st.markdown("""
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; height: 100%;">
+        <p style="color: #f39c12; font-size: 1.2rem; margin: 0;">★★★★★</p>
+        <p style="font-style: italic; color: #333; margin: 10px 0;">"Gracias a las clases de Física pude entender los temas que venía arrastrando desde el secundario. Muy agradecido."</p>
+        <p style="font-weight: bold; color: #555; margin: 0; font-size: 0.9rem;">— Estudiante de Exactas</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+
 
 # Footer
 st.markdown("<br><br><hr><center><small>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
