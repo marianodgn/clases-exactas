@@ -70,7 +70,6 @@ st.markdown("""
     }
 
     /* CORRECCIÓN ANTI-MODO OSCURO PARA CELULARES */
-    /* Fuerza textos oscuros en métricas y labels de formulario */
     [data-testid="stMetricValue"] > div, [data-testid="stMetricLabel"] > div {
         color: #1a1a1a !important;
     }
@@ -79,75 +78,55 @@ st.markdown("""
         font-weight: 500;
     }
     
-    /* Hero */
+    /* ===================================== */
+    /* ESTILOS 3D / EFECTO METALIZADO        */
+    /* ===================================== */
+    
+    /* Hero (Encabezado Principal 3D) */
     .hero { 
         text-align: center; 
         padding: 3rem 1rem; 
-        background: rgba(255, 255, 255, 0.7);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 240, 245, 0.85) 100%);
         backdrop-filter: blur(10px); 
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         border-radius: 20px; 
         margin-bottom: 2rem; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        /* Sombra exterior flotante + Brillo superior 3D + Sombra interna para volumen */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15), inset 0 2px 3px rgba(255,255,255,1), inset 0 -3px 6px rgba(180,190,200,0.5);
     }
     .hero h1 { font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); color: #1a1a1a; line-height: 1.2; margin-bottom: 1rem; }
     .hero p { font-size: clamp(1rem, 3vw, 1.25rem); color: #4a4a4a; max-width: 700px; margin: 0 auto 2rem auto; }
     
-    /* Pills */
+    /* Etiquetas de Materias con ligero relieve */
     .pills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 2rem; }
     .pill { 
-        background-color: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0; 
+        background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+        border: 1px solid #dcdcdc; 
         padding: 8px 16px; border-radius: 50px; font-weight: 600; 
-        color: #2c3e50; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.02); 
+        color: #2c3e50; font-size: 0.9rem; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.06), inset 0 1px 0 #ffffff; 
     }
     
-    /* Tarjetas y Contenedores */
+    /* Tarjeta del Docente 3D */
     .teacher-card {
-        background-color: rgba(255, 255, 255, 0.85); padding: 25px; border-radius: 15px; 
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 240, 245, 0.85) 100%);
+        padding: 25px; border-radius: 15px; 
         border-left: 5px solid #0056b3; margin-bottom: 2rem;
         backdrop-filter: blur(5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12), inset 0 2px 3px rgba(255,255,255,1), inset 0 -3px 5px rgba(180,190,200,0.4);
     }
     
-    .step-container { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
-    .step-icon { 
-        background-color: #0056b3; color: white !important; width: 35px; height: 35px; 
-        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-        font-weight: bold; font-size: 1.1rem; margin-right: 15px; flex-shrink: 0; 
-    }
-    .step-text h4 { margin: 0 0 5px 0; font-weight: 700; color: #1a1a1a !important; font-size: 1.1rem;}
-    .step-text p { margin: 0; color: #333333 !important; font-size: 1rem; line-height: 1.5; }
-    
+    /* Formulario 3D */
     div[data-testid="stForm"] { 
-        background-color: rgba(255, 255, 255, 0.95); 
-        border: 1px solid #eaeaea; 
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 240, 245, 0.85) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.8); 
         border-radius: 20px; 
         padding: clamp(15px, 5vw, 35px);
-        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         backdrop-filter: blur(5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15), inset 0 2px 3px rgba(255,255,255,1), inset 0 -3px 6px rgba(180,190,200,0.5);
     }
     
-    .whatsapp-btn { 
-        display: flex; align-items: center; justify-content: center; gap: 10px;
-        background-color: #25D366; color: white !important; padding: 15px 20px; 
-        text-decoration: none; border-radius: 12px; font-weight: 700; 
-        font-size: 1.1rem; transition: transform 0.2s, background-color 0.2s; 
-        box-shadow: 0 4px 15px rgba(37,211,102,0.3); margin-top: 1rem; 
-        text-align: center;
-    }
-    .whatsapp-btn:hover { background-color: #1ebc59; transform: translateY(-3px); }
-    
-    .disclaimer-box {
-        background-color: rgba(252, 252, 252, 0.9);
-        border: 1px dashed #cccccc;
-        border-radius: 10px;
-        padding: 15px;
-        margin-top: 20px;
-        font-size: 0.85rem;
-        color: #4a4a4a;
-        line-height: 1.4;
-    }
-
-    /* GRID RESPONSIVE PARA RESEÑAS */
+    /* Tarjetas de Reseñas 3D */
     .reviews-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -155,18 +134,52 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .review-card {
-        background-color: rgba(255, 255, 255, 0.95);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 245, 250, 0.85) 100%);
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid #e0e0e0;
+        border: 1px solid rgba(255, 255, 255, 0.8);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1), inset 0 1px 2px rgba(255,255,255,1), inset 0 -2px 4px rgba(180,190,200,0.3);
     }
-    .review-card p.stars { color: #f39c12; font-size: 1.2rem; margin: 0; }
+    .review-card p.stars { color: #f39c12; font-size: 1.2rem; margin: 0; text-shadow: 0 1px 1px rgba(0,0,0,0.1); }
     .review-card p.text { font-style: italic; color: #333; margin: 15px 0; flex-grow: 1; font-size: 0.95rem; line-height: 1.5; }
     .review-card p.author { font-weight: bold; color: #555; margin: 0; font-size: 0.9rem; text-align: right; }
+    
+    /* ===================================== */
+    /* OTROS ESTILOS                         */
+    /* ===================================== */
+    .step-container { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+    .step-icon { 
+        background: linear-gradient(135deg, #006ce6, #004b9b); color: white !important; width: 35px; height: 35px; 
+        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+        font-weight: bold; font-size: 1.1rem; margin-right: 15px; flex-shrink: 0; 
+        box-shadow: 0 4px 10px rgba(0,86,179,0.4);
+    }
+    .step-text h4 { margin: 0 0 5px 0; font-weight: 700; color: #1a1a1a !important; font-size: 1.1rem;}
+    .step-text p { margin: 0; color: #333333 !important; font-size: 1rem; line-height: 1.5; }
+    
+    .whatsapp-btn { 
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        background: linear-gradient(135deg, #25D366, #128C7E); color: white !important; padding: 15px 20px; 
+        text-decoration: none; border-radius: 12px; font-weight: 700; 
+        font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s; 
+        box-shadow: 0 6px 20px rgba(37,211,102,0.4), inset 0 1px 1px rgba(255,255,255,0.4); margin-top: 1rem; 
+        text-align: center;
+    }
+    .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37,211,102,0.5), inset 0 1px 1px rgba(255,255,255,0.4); }
+    
+    .disclaimer-box {
+        background-color: rgba(252, 252, 252, 0.8);
+        border: 1px dashed #aaaaaa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #4a4a4a;
+        line-height: 1.4;
+    }
     
     /* AJUSTES PARA CELULARES */
     @media (max-width: 768px) {
@@ -183,7 +196,7 @@ st.markdown("""
 st.markdown("""
 <div class="hero">
     <h1>Clases Particulares de Ciencias Exactas a Medida</h1>
-    <p>Acompañamiento académico personalizado para Universidad, CBC y Nivel Secundario.</p>
+    <p>Acompañamiento académico personalizado para Universidad (UBA), CBC y Nivel Secundario.</p>
     <div class="pills-container">
         <span class="pill">Análisis Matemático</span>
         <span class="pill">Introducción a la Matemática</span>
@@ -204,7 +217,7 @@ st.markdown("""
 m1, m2, m3, m4 = st.columns(4)
 m1.metric(label="Experiencia Docente", value="+20 Años")
 m2.metric(label="Alumnos Aprobados", value="+500")
-m3.metric(label="Universidades", value="UBA / UTN / UM / UNAHUR / UNGS / UNLAM / UNO")
+m3.metric(label="Universidades", value="UBA")
 m4.metric(label="Modalidad", value="Online / Presencial")
 
 st.markdown("<hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
@@ -296,7 +309,7 @@ with col_form:
 # 5. SECCIÓN DE OPINIONES / RESEÑAS (Responsive)
 # ==========================================
 st.markdown("<br><hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen las reseñas de mis alumnas y alumnos </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen los alumnos</h2>", unsafe_allow_html=True)
 
 # Grilla con las 15 reseñas
 st.markdown("""
