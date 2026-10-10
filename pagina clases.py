@@ -145,17 +145,18 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .review-card {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.95);
         padding: 20px;
         border-radius: 12px;
         border: 1px solid #e0e0e0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     }
     .review-card p.stars { color: #f39c12; font-size: 1.2rem; margin: 0; }
-    .review-card p.text { font-style: italic; color: #333; margin: 10px 0; flex-grow: 1; }
-    .review-card p.author { font-weight: bold; color: #555; margin: 0; font-size: 0.9rem; }
+    .review-card p.text { font-style: italic; color: #333; margin: 15px 0; flex-grow: 1; font-size: 0.95rem; line-height: 1.5; }
+    .review-card p.author { font-weight: bold; color: #555; margin: 0; font-size: 0.9rem; text-align: right; }
     
     /* AJUSTES PARA CELULARES */
     @media (max-width: 768px) {
@@ -286,7 +287,7 @@ with col_form:
 st.markdown("<br><hr>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen los alumnos</h2>", unsafe_allow_html=True)
 
-# Reemplazamos st.columns por un grid HTML 100% responsive
+# Grilla con las 15 reseñas
 st.markdown("""
 <div class="reviews-grid">
     <div class="review-card">
@@ -296,16 +297,45 @@ st.markdown("""
     </div>
     <div class="review-card">
         <p class="stars">★★★★★</p>
-        <p class="text">"Excelente profesor! Es súper didáctico, explica los temas de forma clara, rápida y sencilla. Se preocupa que entiendas y hace las clases entretenidas. Me ayudó a preparar mis parciales y finales de la universidad. 100% recomendado"</p>
-        <p class="author">— Ayelen</p>
-    </div>
-    <div class="review-card">
-        <p class="stars">★★★★★</p>
         <p class="text">"Excelente profesor Mariano, siempre atento a que entiendas y las clases super dinámicas además de estar siempre en contacto para lo que precises. Quedan pocos como el! Super recomendable!."</p>
         <p class="author">— Marcos</p>
     </div>
-</div>
-""", unsafe_allow_html=True)
-
-# Footer
-st.markdown("<br><center><small>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Excelente docente y persona! Es muy práctico y muy seguro con sus conocimientos.💫"</p>
+        <p class="author">— Melissa</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Excelente profesional, muy buena persona, súper paciente y atento a todo! Lo queremos❤️⭐️"</p>
+        <p class="author">— Debora</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"El mejor que pude encontrar muy copado y te explica las veces que quieras, la verdad súper recomendado"</p>
+        <p class="author">— Maximo</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Excelente profesor!! Tiene una forma de explicar las cosas muy buena hasta llegar a entender lo que no entendiste. Muy recomendable!"</p>
+        <p class="author">— Tiziana</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"Muy buen profe,explica muy bien recomendable."</p>
+        <p class="author">— Gastón</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"El mejor profesor que pude encontrar sin duda ! Explica súper bien y es muy paciente , súper recomendado!"</p>
+        <p class="author">— Lur</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"El profesor Mariano , el mejor de todos , le explico a mi hijo , estamos felices saco 10!!!!! Geniooo super recomendable"</p>
+        <p class="author">— Natalia</p>
+    </div>
+    <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="text">"muy buena enseñanza y muy atento con sus alumnos!! Gracias Mariano"</p>
+        <p class="author">— Delfina</
