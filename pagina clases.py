@@ -52,7 +52,7 @@ st.set_page_config(page_title="Clases Exactas | Acompañamiento Académico", pag
 st.markdown("""
     <style>
     /* Tipografía limpia */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    @import url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop');
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     
     /* IMAGEN DE FONDO CON VELO BLANCO */
