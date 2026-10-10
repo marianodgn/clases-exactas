@@ -68,6 +68,16 @@ st.markdown("""
     [data-testid="stHeader"] {
         background-color: transparent !important;
     }
+
+    /* CORRECCIÓN ANTI-MODO OSCURO PARA CELULARES */
+    /* Fuerza textos oscuros en métricas y labels de formulario */
+    [data-testid="stMetricValue"] > div, [data-testid="stMetricLabel"] > div {
+        color: #1a1a1a !important;
+    }
+    .stTextInput label p, .stSelectbox label p, .stTextArea label p {
+        color: #1a1a1a !important;
+        font-weight: 500;
+    }
     
     /* Hero */
     .hero { 
@@ -100,12 +110,12 @@ st.markdown("""
     
     .step-container { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
     .step-icon { 
-        background-color: #0056b3; color: white; width: 35px; height: 35px; 
+        background-color: #0056b3; color: white !important; width: 35px; height: 35px; 
         border-radius: 50%; display: flex; align-items: center; justify-content: center; 
         font-weight: bold; font-size: 1.1rem; margin-right: 15px; flex-shrink: 0; 
     }
-    .step-text h4 { margin: 0 0 5px 0; font-weight: 700; color: #1a1a1a; font-size: 1.1rem;}
-    .step-text p { margin: 0; color: #555; font-size: 1rem; line-height: 1.5; }
+    .step-text h4 { margin: 0 0 5px 0; font-weight: 700; color: #1a1a1a !important; font-size: 1.1rem;}
+    .step-text p { margin: 0; color: #333333 !important; font-size: 1rem; line-height: 1.5; }
     
     div[data-testid="stForm"] { 
         background-color: rgba(255, 255, 255, 0.95); 
@@ -133,7 +143,7 @@ st.markdown("""
         padding: 15px;
         margin-top: 20px;
         font-size: 0.85rem;
-        color: #666666;
+        color: #4a4a4a;
         line-height: 1.4;
     }
 
@@ -196,7 +206,8 @@ m1.metric(label="Experiencia Docente", value="+20 Años")
 m2.metric(label="Alumnos Aprobados", value="+500")
 m3.metric(label="Universidades", value="UBA")
 m4.metric(label="Modalidad", value="Online / Presencial")
-st.write("---")
+
+st.markdown("<hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
 
 # ==========================================
 # 4. ESTRUCTURA PRINCIPAL (2 Columnas)
@@ -206,15 +217,15 @@ col_info, col_form = st.columns([1.1, 1], gap="large")
 with col_info:
     st.markdown("""
     <div class="teacher-card">
-        <h3 style="margin-top:0;">👨‍🏫 Sobre el Docente</h3>
+        <h3 style="margin-top:0; color: #1a1a1a;">👨‍🏫 Sobre el Docente</h3>
         <p style="margin-bottom:0; font-size: 1.05rem; color: #333;">
         Soy docente universitario e investigador. Mi formación en ciencias exactas y mi experiencia diaria en las aulas me permiten brindarte herramientas concretas, métodos claros y el enfoque exacto para superar los exámenes más exigentes.
         </p>
     </div>
     """, unsafe_allow_html=True)
     
-    st.markdown("### ¿Cómo funciona el proceso?")
-    st.write("Te acompaño paso a paso para que recuperes la confianza y apruebes.")
+    st.markdown("<h3 style='color: #1a1a1a; margin-top: 10px;'>¿Cómo funciona el proceso?</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #4a4a4a; margin-bottom: 20px;'>Te acompaño paso a paso para que recuperes la confianza y apruebes.</p>", unsafe_allow_html=True)
     
     st.markdown("""
     <div class="step-container">
@@ -244,8 +255,8 @@ with col_info:
     st.markdown(f'<a href="{url_whatsapp}" target="_blank" class="whatsapp-btn">💬 Consultar disponibilidad por WhatsApp</a>', unsafe_allow_html=True)
 
 with col_form:
-    st.markdown("<h3 style='margin-bottom: 0px;'>📬 Solicitar información</h3>", unsafe_allow_html=True)
-    st.write("Tus datos son confidenciales. Te responderé a la brevedad con aranceles y horarios disponibles.")
+    st.markdown("<h3 style='margin-bottom: 0px; color: #1a1a1a;'>📬 Solicitar información</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #4a4a4a; margin-bottom: 15px;'>Tus datos son confidenciales. Te responderé a la brevedad con aranceles y horarios disponibles.</p>", unsafe_allow_html=True)
     
     with st.form("contacto_form"):
         nombre = st.text_input("Tu Nombre Completo *", placeholder="Ej: Juan Pérez")
@@ -276,15 +287,15 @@ with col_form:
 
     st.markdown("""
     <div class="disclaimer-box">
-        <strong>Aviso importante sobre disponibilidad:</strong><br>
-        Debido a mis compromisos de docencia e investigación universitaria, mi agenda suele estar completa. Si no recibís una respuesta a tu consulta a la brevedad, te ruego desestimarla, ya que significará que lamentablemente no cuento con cupos disponibles en este momento. Por este motivo, <strong>no es posible atender urgencias a pocos días de un examen</strong>. Gracias por comprender.
+        <strong style="color: #1a1a1a;">Aviso importante sobre disponibilidad:</strong><br>
+        Debido a mis compromisos de docencia e investigación universitaria, mi agenda suele estar completa. Si no recibís una respuesta a tu consulta a la brevedad, te ruego desestimarla, ya que significará que lamentablemente no cuento con cupos disponibles en este momento. Por este motivo, <strong style="color: #1a1a1a;">no es posible atender urgencias a pocos días de un examen</strong>. Gracias por comprender.
     </div>
     """, unsafe_allow_html=True)
 
 # ==========================================
 # 5. SECCIÓN DE OPINIONES / RESEÑAS (Responsive)
 # ==========================================
-st.markdown("<br><hr>", unsafe_allow_html=True)
+st.markdown("<br><hr style='border: 1px solid #eaeaea;'>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: #1a1a1a; margin-bottom: 30px;'>⭐ Lo que dicen los alumnos</h2>", unsafe_allow_html=True)
 
 # Grilla con las 15 reseñas
@@ -369,4 +380,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Footer
-st.markdown("<br><center><small>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
+st.markdown("<br><center><small style='color: #4a4a4a;'>© 2026. Buenos Aires, Argentina. Todos los derechos reservados.</small></center>", unsafe_allow_html=True)
